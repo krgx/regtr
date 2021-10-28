@@ -1,0 +1,19 @@
+﻿<Window x:Class="regtr.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:regtr"
+        mc:Ignorable="d"
+        Title="Window3" Height="450" Width="800">
+    <Grid Background="CadetBlue">
+        <Border MinWidth="400"  Background="white" VerticalAlignment="Center" Padding="90" Height="399" CornerRadius="20" Margin="22,35">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="Личный кабинет:" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
