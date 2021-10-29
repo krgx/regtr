@@ -23,5 +23,12 @@ namespace regtr
         {
             InitializeComponent();
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MainWindow Main = new MainWindow();
+            this.Close();
+            Main.Show();
+        }
     }
 }
