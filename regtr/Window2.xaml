@@ -15,11 +15,11 @@
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock Text="Регистрация" FontSize="30" TextAlignment="Center" FontWeight="Bold"></TextBlock>
                 <TextBlock TextAlignment="Center" HorizontalAlignment="Center" FontSize="12" Height="21"><Run Text="Придумайте логин:"/></TextBlock>
-                <PasswordBox VerticalAlignment="Center" Height="18" Width="200"/>
+                <TextBox Name="log1" VerticalAlignment="Center" Height="18" Width="200"/>
                 <TextBlock TextAlignment="Center" FontSize="12" Height="21" Width="200"><Run Text="Придумайте пароль:"/></TextBlock>
-                <PasswordBox VerticalAlignment="Center" Height="18" Width="200"/>
+                <PasswordBox Name="passs1" VerticalAlignment="Center" Height="18" Width="200"/>
                 <TextBlock TextAlignment="Center" FontSize="12" Height="21" Width="200"><Run Text="Повторите пароль:"/></TextBlock>
-                <PasswordBox VerticalAlignment="Center" Height="18" Width="200"/>
+                <PasswordBox Name="passs2" VerticalAlignment="Center" Height="18" Width="200"/>
                 <StackPanel HorizontalAlignment="Left">
                     <!--<Grid VerticalAlignment="Center">
                         <Button HorizontalAlignment="Center" VerticalAlignment="Center"  Width="200" Background="#FF8572AE" FontSize="15"  >Войти</Button>

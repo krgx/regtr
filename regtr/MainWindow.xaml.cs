@@ -21,26 +21,56 @@ namespace regtr
     public partial class MainWindow : Window
     {
         public MainWindow()
-           
+
         {
             InitializeComponent();
-            
+
 
 
         }
+
         // при нажатии кнопки регистрации открывается окно регистрации
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_Vhod(object sender, RoutedEventArgs e)
         {
-            Window2 window2 = new Window2();
-            this.Close();
-            window2.Show();
+            string log = jopa.Text;
+            string pass = pas.Password;
+
+            if (log.Length > 2 && pass.Length > 3)
+            {
+                using (hachiuebani123 hachi = new hachiuebani123())
+                {
+                    var query = hachi.auth.Where(x => x.login == log && x.password == pass).FirstOrDefault();
+
+                    if (query != null)
+                    {
+                        MessageBox.Show("Вы успешно зашли!");
+                        Window3 profile = new Window3();
+                        this.Close();
+                        profile.Show();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не правильно введен логин или пароль");
+
+            }
         }
-        private void Button_Click_2(object sender,RoutedEventArgs e)
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Window3 window3 = new Window3();
-            window3.Show();
+            Window2 reg = new Window2();
+            this.Close();
+            reg.Show();
         }
     }
 }
+
+
+        
+
+           
+                
+                
 
 

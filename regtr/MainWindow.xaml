@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:regtr"
         mc:Ignorable="d"
-        Title="auth" Height="500" Width="800">
+        Title="MainWindow" Height="500" Width="800">
     <Grid Background="CadetBlue">
         <Border MinWidth="400"  Background="white" VerticalAlignment="Center" Padding="90" Height="399" CornerRadius="20" Margin="22,35"> 
             <Border.Effect>
@@ -14,13 +14,13 @@
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock Text="Авторизация:" FontSize="30" TextAlignment="Center" FontWeight="Bold"></TextBlock>
                 <TextBlock TextAlignment="Center" HorizontalAlignment="Center" FontSize="12" Height="21"><Run Text="Логин"/></TextBlock>
-                <PasswordBox VerticalAlignment="Center" Height="18" Width="200"/>
+                <TextBox Name="jopa" VerticalAlignment="Center" Height="18" Width="200"/>
                 <TextBlock TextAlignment="Center" FontSize="12" Height="21" Width="200"><Run Text="Пароль"/></TextBlock>
-                <PasswordBox VerticalAlignment="Center" Height="18" Width="200"/>
-
+                <PasswordBox Name="pas" VerticalAlignment="Center" Height="18" Width="200"/>
+               
                 <StackPanel HorizontalAlignment="Left">
                     <Grid VerticalAlignment="Center">
-                        <Button  Click="Button_Click_2" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="200" Background="#FF8572AE" FontSize="15"  >Войти</Button>
+                        <Button  Click="Button_Click_Vhod" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="200" Background="#FF8572AE" FontSize="15"  >Войти</Button>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -29,7 +29,8 @@
                             <ColumnDefinition Width="23*"/>
                             <ColumnDefinition Width="23*"/>
                         </Grid.ColumnDefinitions>
-                        <Button  Click="Button_Click_1"
+                        <!--// кнопка регистрации-->
+                        <Button  Click="Button_Click_2"
                         
                         HorizontalAlignment="Center"  
                                 VerticalAlignment="Bottom"

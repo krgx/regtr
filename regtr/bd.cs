@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace regtr.bd
+namespace regtr
 {
     using System;
     using System.Collections.Generic;
