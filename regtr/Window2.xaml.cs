@@ -23,25 +23,28 @@ namespace regtr
         {
             InitializeComponent();
         }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        //При нажатие на кнопку идет создание нового пользователя
+        private void Button_Click_Register(object sender, RoutedEventArgs e)
         {
             {
                 Window2 reg = new Window2();
                 this.Close();
                 reg.Show();
+                //Ввод логина и пароля для нового пользователя 
                 string loginReg = log1.Text.Trim();
                 string passReg = passs1.Password;
                 string passReg2 = passs2.Password;
                 if (loginReg.Length > 2 && passReg.Length > 3 && passReg2.Length > 3)
                 {
                     if (passReg == passReg2)
+                        //Используем базу данных для занесения пользователя в базу
                     {
                         using (hachiuebani123 hachi = new hachiuebani123())
                         {
                             var query = hachi.auth.Where(x => x.login.Equals(loginReg)).FirstOrDefault();
 
                             if (query == null)
+                                //Добавление нового пользователя 
                             {
                                 hachi.auth.Add(new auth()
                                 {
@@ -50,7 +53,8 @@ namespace regtr
                                 }
                                 );
                                 hachi.SaveChanges();
-                                MessageBox.Show("Работает");
+
+                                MessageBox.Show("Поздравляем!Вы успешно зарегестрировались!");
                                 MainWindow Main = new MainWindow();
                                 this.Close();
                                 Main.Show();

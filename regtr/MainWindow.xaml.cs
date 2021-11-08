@@ -29,15 +29,17 @@ namespace regtr
 
         }
 
-        // при нажатии кнопки регистрации открывается окно регистрации
+        //При нажатие проверяется данные для входа,если они правильные то подключаемся к личному кабинету
         private void Button_Click_Vhod(object sender, RoutedEventArgs e)
         {
-            string log = jopa.Text;
-            string pass = pas.Password;
 
+            string log = loggg.Text;
+            string pass = pas.Password;
+            
             if (log.Length > 2 && pass.Length > 3)
             {
                 using (hachiuebani123 hachi = new hachiuebani123())
+                    //Проверка на правильные данные пользователя
                 {
                     var query = hachi.auth.Where(x => x.login == log && x.password == pass).FirstOrDefault();
 
@@ -56,8 +58,8 @@ namespace regtr
 
             }
         }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        //При нажатие на кнопку открывается окно регистрации
+        private void Button_Click_Reg(object sender, RoutedEventArgs e)
         {
             Window2 reg = new Window2();
             this.Close();
@@ -67,10 +69,51 @@ namespace regtr
 }
 
 
-        
-
-           
-                
-                
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//https://studbooks.net/1938603/informatika/proektirovanie_bazy_dannyh_subd_mysql

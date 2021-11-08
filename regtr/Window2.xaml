@@ -6,19 +6,24 @@
         xmlns:local="clr-namespace:regtr"
         mc:Ignorable="d"
         Title="Window2" Height="450" Width="800">
+    <!--Дизайн заднего фона-->
     <Grid Background="CadetBlue">
         <Border MinWidth="400"  Background="white" VerticalAlignment="Center" Padding="90" Height="399" CornerRadius="20" Margin="22,35">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="LightGray"></DropShadowEffect>
             </Border.Effect>
-
+                <!--Главные меню кнопок и ввода данных-->
             <StackPanel HorizontalAlignment="Center">
+                
                 <TextBlock Text="Регистрация" FontSize="30" TextAlignment="Center" FontWeight="Bold"></TextBlock>
                 <TextBlock TextAlignment="Center" HorizontalAlignment="Center" FontSize="12" Height="21"><Run Text="Придумайте логин:"/></TextBlock>
+                <!--Окошко для ввода логина-->
                 <TextBox Name="log1" VerticalAlignment="Center" Height="18" Width="200"/>
                 <TextBlock TextAlignment="Center" FontSize="12" Height="21" Width="200"><Run Text="Придумайте пароль:"/></TextBlock>
+                <!--Окошко для ввода пароля-->
                 <PasswordBox Name="passs1" VerticalAlignment="Center" Height="18" Width="200"/>
                 <TextBlock TextAlignment="Center" FontSize="12" Height="21" Width="200"><Run Text="Повторите пароль:"/></TextBlock>
+                <!--Окошко для ввода пароля повторно-->
                 <PasswordBox Name="passs2" VerticalAlignment="Center" Height="18" Width="200"/>
                 <StackPanel HorizontalAlignment="Left">
                     <!--<Grid VerticalAlignment="Center">
@@ -31,7 +36,8 @@
                             <ColumnDefinition Width="23*"/>
                             <ColumnDefinition Width="23*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Click="Button_Click_4"
+                        <!--Кнопка регистрации-->
+                        <Button Click="Button_Click_Register"
                        
                         HorizontalAlignment="Center"  
                                 VerticalAlignment="Bottom"
