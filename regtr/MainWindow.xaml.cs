@@ -32,17 +32,19 @@ namespace regtr
         //При нажатие проверяется данные для входа,если они правильные то подключаемся к личному кабинету
         private void Button_Click_Vhod(object sender, RoutedEventArgs e)
         {
-
+            // инициал. переменных
             string log = loggg.Text;
             string pass = pas.Password;
             
-            if (log.Length > 2 && pass.Length > 3)
+            //Условие,если лоина логина и пароля больше 2 символов,идет подключение к базе
+            if (log.Length > 2 && pass.Length > 2)
             {
                 using (hachiuebani123 hachi = new hachiuebani123())
                     //Проверка на правильные данные пользователя
                 {
+                    //запрос где логин и пароль совпадают с данными в базе
                     var query = hachi.auth.Where(x => x.login == log && x.password == pass).FirstOrDefault();
-
+                    //условие если запрос не пустой открывается личный кабинет
                     if (query != null)
                     {
                         MessageBox.Show("Вы успешно зашли!");

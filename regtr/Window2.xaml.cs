@@ -34,15 +34,23 @@ namespace regtr
                 string loginReg = log1.Text.Trim();
                 string passReg = passs1.Password;
                 string passReg2 = passs2.Password;
+                string str = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+                if (str.Contains("абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"))
+                    MessageBox.Show("Строка содержит кириллицу");
+                else
+                    MessageBox.Show("Все работает");
+
                 if (loginReg.Length > 2 && passReg.Length > 3 && passReg2.Length > 3)
                 {
+                    //условие,если пароль и подтв пароля совпадают
                     if (passReg == passReg2)
                         //Используем базу данных для занесения пользователя в базу
                     {
                         using (hachiuebani123 hachi = new hachiuebani123())
                         {
+                            //запрос к базе
                             var query = hachi.auth.Where(x => x.login.Equals(loginReg)).FirstOrDefault();
-
+                            // если такого лоигна нет,то он вносится в базу
                             if (query == null)
                                 //Добавление нового пользователя 
                             {
@@ -52,12 +60,16 @@ namespace regtr
                                     password = passReg,
                                 }
                                 );
+                                //сохранение изменений
                                 hachi.SaveChanges();
-
                                 MessageBox.Show("Поздравляем!Вы успешно зарегестрировались!");
                                 MainWindow Main = new MainWindow();
                                 this.Close();
                                 Main.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Такой логин уже существует");
                             }
                         }
                     }
@@ -65,6 +77,7 @@ namespace regtr
                     {
                         MessageBox.Show("Пароли не совпадают");
                     }
+
                 }
                 else
                 {
