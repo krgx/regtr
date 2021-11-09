@@ -34,11 +34,11 @@ namespace regtr
                 string loginReg = log1.Text.Trim();
                 string passReg = passs1.Password;
                 string passReg2 = passs2.Password;
-                string str = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-                if (str.Contains("абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"))
-                    MessageBox.Show("Строка содержит кириллицу");
-                else
-                    MessageBox.Show("Все работает");
+                //string str = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+                //if (str.Contains("абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"))
+                //    MessageBox.Show("Строка содержит кириллицу");
+                //else
+                //    MessageBox.Show("Все работает");
 
                 if (loginReg.Length > 2 && passReg.Length > 3 && passReg2.Length > 3)
                 {
