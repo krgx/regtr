@@ -7,8 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800">
     <!--Задний фон окошка-->
-    <Grid Background="CadetBlue">
-        <Border MinWidth="400"  Background="white" VerticalAlignment="Center" Padding="90" Height="399" CornerRadius="20" Margin="22,35"> 
+    <Grid 
+        Background="CadetBlue">
+        <Border 
+            MinWidth="400"  
+            Background="white" 
+            VerticalAlignment="Center" 
+            Padding="90" Height="399" 
+            CornerRadius="20" 
+            Margin="22,35"> 
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="LightGray"></DropShadowEffect>
             </Border.Effect>
@@ -17,10 +24,10 @@
                 <TextBlock Text="Авторизация:" FontSize="30" TextAlignment="Center" FontWeight="Bold"></TextBlock>
                 <TextBlock TextAlignment="Center" HorizontalAlignment="Center" FontSize="12" Height="21"><Run Text="Логин"/></TextBlock>
                 <!--Окно ввода логина-->
-                <TextBox Name="loggg" VerticalAlignment="Center" Height="18" Width="200"/>
+                <TextBox Name="LoginAuth" VerticalAlignment="Center" Height="18" Width="200"/>
                 <TextBlock TextAlignment="Center" FontSize="12" Height="21" Width="200"><Run Text="Пароль"/></TextBlock>
                 <!--Окно ввода пароля-->
-                <PasswordBox Name="pas" VerticalAlignment="Center" Height="18" Width="200"/>
+                <PasswordBox Name="PassAuth" VerticalAlignment="Center" Height="18" Width="200"/>
                <!--Кнопка входа-->
                 <StackPanel HorizontalAlignment="Left">
                     <Grid VerticalAlignment="Center">
