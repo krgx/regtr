@@ -31,7 +31,15 @@
                <!--Кнопка входа-->
                 <StackPanel HorizontalAlignment="Left">
                     <Grid VerticalAlignment="Center">
-                        <Button  Click="Button_Click_Vhod" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="200" Background="#FF8572AE" FontSize="15"  >Войти</Button>
+                        <Button  
+                            Margin="10"
+                            Click="Button_Click_Vhod" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"  
+                            Width="200" Background="#FF8572AE" 
+                            FontSize="15">
+                                Войти
+                        </Button>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -41,12 +49,16 @@
                             <ColumnDefinition Width="23*"/>
                         </Grid.ColumnDefinitions>
                         <!--// кнопка регистрации-->
-                        <Button  Click="Button_Click_Reg"
-                        
-                        HorizontalAlignment="Center"  
-                                VerticalAlignment="Bottom"
-                        Width="200" Background="#FF8572AE" 
-                        FontSize="15" Grid.ColumnSpan="3" Grid.Column="1" >
+                        <Button
+                            Margin="10"
+                            Click="Button_Click_Reg"
+                            HorizontalAlignment="Center"  
+                            VerticalAlignment="Bottom"
+                            Width="200" 
+                            Background="#FF8572AE" 
+                            FontSize="15" 
+                            Grid.ColumnSpan="3"
+                            Grid.Column="1" >
                             Регистрация
                         </Button>
                     </Grid>

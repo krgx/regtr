@@ -36,10 +36,10 @@ namespace regtr
                 string loginReg = RegLog.Text.Trim();
                 string passReg = RegPass.Password;
                 string passReg2 = RegPassR.Password;
-                if (loginReg.Length > 2 && passReg.Length > 3 && passReg2.Length > 3)
+                if (loginReg.Length > 2 && passReg.Length > 5 && passReg2.Length > 5)
 
                 {
-                    if (Regex.IsMatch(loginReg.ToLower(), "йцукенгшщзхъфывапролджэячсмитьбю.\\||//ъх!@#$%^&*()_+=-Ё~`:;\"\'<>,-@№ "))
+                    if (Regex.IsMatch(loginReg.ToLower(), "йцукенгшщзхъфывапролджэячсмитьбю.\\||//ъх!@#$%^&*()_+=-Ё~`:;\"\'<>,-@№"))
                     {
 
                         //условие,если пароль и подтв пароля совпадают
@@ -80,16 +80,24 @@ namespace regtr
                     }
                     else
                     {
-                        MessageBox.Show("Логин или пароль введены не правильно");
+                        MessageBox.Show("Недопустимые символы");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Недопустимые символы!");
+                    MessageBox.Show("Пароль меньше 6 символов");
                 }
 
             }
 
+        }
+
+        private void Button_Click_Help(object sender, RoutedEventArgs e)
+        {
+            Window2 reg = new Window2();
+            MessageBox.Show("Разрешенные символы для регистрации:Английский алфавит,Цифры от 0 до 9!");
+            this.Close();
+            reg.Show();
         }
     }
 }
