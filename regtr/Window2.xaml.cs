@@ -39,7 +39,7 @@ namespace regtr
                 if (loginReg.Length > 2 && passReg.Length > 5 && passReg2.Length > 5)
 
                 {
-                    if (Regex.IsMatch(loginReg.ToLower(), "йцукенгшщзхъфывапролджэячсмитьбю.\\||//ъх!@#$%^&*()_+=-Ё~`:;\"\'<>,-@№"))
+                    if (!Regex.IsMatch(loginReg.ToLower(), "[йцукенгшщзхъфывапролджэячсмитьбю.\\||//ъх!@#$%^&*()_+=-Ё~`:;\"\'<>,-@№{}[]"))
                     {
 
                         //условие,если пароль и подтв пароля совпадают
