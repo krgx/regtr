@@ -99,6 +99,15 @@ namespace regtr
             this.Close();
             reg.Show();
         }
+
+
+        
+        private void Button_Click_Back(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            this.Close();
+            main.Show(); 
+        }
     }
 }
 

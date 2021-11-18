@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:regtr"
         mc:Ignorable="d"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         Title="Window3" Height="450" Width="800">
     <Grid Background="CadetBlue">
         <Border MinWidth="400"  Background="white" VerticalAlignment="Center" Padding="90" Height="399" CornerRadius="20" Margin="22,35">
@@ -13,6 +14,16 @@
             </Border.Effect>
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock Text="Личный кабинет:" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+                <Image gif:ImageBehavior.RepeatBehavior="Forever"
+               gif:ImageBehavior.AnimatedSource="Image/Zxcursed.gif" Height="200" Width="311" />
+                <!--<MediaElement x:Name="gif" HorizontalAlignment="Left" Height="173" VerticalAlignment="Top" Width="239" Source="Zxcursed.gif" MediaEnded="gif_MediaEnded"/>-->
+                <!--<MediaElement x:Name="gif"
+                MediaEnded="gif_MediaEnded" 
+                UnloadedBehavior="Manual"
+                Source="Zxcursed.gif"
+                LoadedBehavior="Play"
+                Stretch="None">
+                </MediaElement>-->
             </StackPanel>
         </Border>
     </Grid>

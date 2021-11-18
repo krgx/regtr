@@ -13,15 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace regtr
+    
+
 {
     /// <summary>
     /// Логика взаимодействия для Window3.xaml
     /// </summary>
     public partial class Window3 : Window
+
     {
         public Window3()
         {
             InitializeComponent();
+    
         }
+       
+
     }
 }

@@ -51,16 +51,32 @@
 
                     </StackPanel>
                 </StackPanel>
-                <Button Click="Button_Click_Help" 
+                <StackPanel Orientation="Horizontal" 
+                            
+                             Width="110"
+                                Margin="0 8 0 0">
+
+                    <Button Click="Button_Click_Back"  
+                            Content="⮌"
+                            HorizontalAlignment="Left"
+                            FontSize="20"
+                            Width="30"
+                            Height="30"
+                            Background="CadetBlue" 
+                            />
+                    <Button Click="Button_Click_Help"                                               
                         HorizontalAlignment="Right"
-                        VerticalAlignment="Stretch"
-                        RenderTransformOrigin="0.095,10.493" 
                         Content="?"
                         FontSize="20"
                         Width="30"
                         Height="30"
                         Background="CadetBlue"
+                        Margin="50 0 0 0"
                         />
+
+                </StackPanel>
+
+
             </StackPanel>
         </Border>
     </Grid>
